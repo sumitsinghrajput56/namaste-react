@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "namaste-react",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
@@ -26,6 +28,8 @@
   "browserslist": [
     "last 2 Chrome version",
     "last 2 Firefox version"
-  ]
+  ],
+  "devDependencies": {
+    "parcel": "^2.16.1"
+  }
 }
-
