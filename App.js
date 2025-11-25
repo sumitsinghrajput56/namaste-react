@@ -1,25 +1,70 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
+// Header
+//     -Logo
+//     -Nav items
+// Body
+//     -Search
+//     -RestaurantContainer
+            // -img
+            // -name of res, Star rating, cuisine, Delivery title
+//     -RestaurantCard
+// Footer
+//     -copyright
+//     -Links
+//     -Address
+//     -Contact
 
-// React Functiona component
-const Title = () => (
-  <h1 className="heading" tabIndex="1">
-    Namaste react using jsx
-  </h1>
-);
+const Header = () => {
+  return (
+    <div className="header">
+      <div className="logo-container">
+        <img
+          className="logo"
+          src="https://dynamic.brandcrowd.com/asset/logo/ffd52597-8932-4658-a240-d95adce02f1f/logo-search-grid-2x?logoTemplateVersion=2&v=638197401494600000"
+        />
+      </div>
+      <div className="nav-items">
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Cart</li>
+        </ul>
+      </div>
+    </div>
+  );
+};
 
-const HeadingComponent = () => (
-  <div id="container">
-   {Title()}
-   <Title/>
-   <Title></Title>
-    <h1 className="heading1">Namaste react functiona component </h1>
-  </div>
-);
+const RestaurantCard = () => {
+  <div className="rest-card">
+    <h3>Meghana Foods</h3>
+  </div>;
+};
 
+const Body = () => {
+  return (
+    <div className="body">
+      <div className="search">Search</div>
+      <div className="res-container">
+        <RestaurantCard/>
+      </div>
+    </div>
+  );
+};
+
+const AppLayout = () => {
+  return (
+    <div className="app">
+      <Header />
+      {/* Body  */}
+      {/* Footer  */}
+    </div>
+  );
+};
 
 const roots = ReactDOM.createRoot(document.getElementById("root"));
 
 // How to render functional component
-roots.render(<HeadingComponent/>);
+roots.render(<AppLayout />);
