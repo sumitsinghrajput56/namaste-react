@@ -16,10 +16,6 @@ import ReactDOM from "react-dom/client";
 //     -Address
 //     -Contact
 
-const StyleCard = {
-    backgroundColor: "#f0f0f0",
-}
-
 const Header = () => {
   return (
     <div className="header">
@@ -42,7 +38,9 @@ const Header = () => {
 };
 
 const RestaurantCard = () => {
-  return (<div className="res-card" style={StyleCard}>
+  return (<div className="res-card" style={{
+    backgroundColor: "#f0f0f0",
+}}>
     <h3>Meghana Foods</h3>
   </div>);
 };
