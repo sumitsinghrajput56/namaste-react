@@ -7,14 +7,18 @@ import ReactDOM from "react-dom/client";
 // Body
 //     -Search
 //     -RestaurantContainer
-            // -img
-            // -name of res, Star rating, cuisine, Delivery title
+// -img
+// -name of res, Star rating, cuisine, Delivery title
 //     -RestaurantCard
 // Footer
 //     -copyright
 //     -Links
 //     -Address
 //     -Contact
+
+const StyleCard = {
+    backgroundColor: "#f0f0f0",
+}
 
 const Header = () => {
   return (
@@ -38,9 +42,9 @@ const Header = () => {
 };
 
 const RestaurantCard = () => {
-  <div className="rest-card">
+  return (<div className="res-card" style={StyleCard}>
     <h3>Meghana Foods</h3>
-  </div>;
+  </div>);
 };
 
 const Body = () => {
@@ -48,7 +52,7 @@ const Body = () => {
     <div className="body">
       <div className="search">Search</div>
       <div className="res-container">
-        <RestaurantCard/>
+        <RestaurantCard />
       </div>
     </div>
   );
@@ -58,7 +62,7 @@ const AppLayout = () => {
   return (
     <div className="app">
       <Header />
-      {/* Body  */}
+      <Body />
       {/* Footer  */}
     </div>
   );
