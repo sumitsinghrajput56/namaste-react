@@ -1,19 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// React.createElement => objcet => HTMLElement(render)
 
-const heading = React.createElement("h1", { id: "heading" }, "hello sumit");
+// react element 
+const heading = (<h1 className="heading" tabIndex="1">Namaste react using jsx</h1>);
 
 console.log(heading);
 
-// JSX - HTML-like  or XML-like syntex
-
-// jsx (transpilled before it reaches the js) - pracel - babel 
-
-const jsxHeading = <h1 id="heading">Namaste react using jsx</h1>;
-
-console.log(jsxHeading);
 
 const roots = ReactDOM.createRoot(document.getElementById("root"));
 
