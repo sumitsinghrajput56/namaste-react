@@ -29,6 +29,8 @@ const number = 1000;
 const HeadingComponent = () => (
   <div id="container">
     {number}
+    <h2>{number}</h2>
+    <h2>{100+200}</h2>
     <h1 className="heading1">Namaste react functiona component </h1>
   </div>
 );
