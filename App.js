@@ -2,11 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 // functional component
-const Title = () => (
-  <h1 className="heading" tabIndex="1">
-    Namaste react using jsx
-  </h1>
-);
+const Title = function () {
+  return (
+    <h1 className="heading" tabIndex="1">
+      Namaste react using jsx
+    </h1>
+  );
+};
 
 // React Component
 // Class Based Component - OLD
@@ -17,21 +19,21 @@ const Title = () => (
 const Heading1 = () => <h1 className="heading">Namaste react</h1>;
 
 const Heading2 = () => {
-    return <h1 className="heading1">Namaste react</h1>;
+  return <h1 className="heading1">Namaste react</h1>;
 };
 
 const Heading3 = () => {
-    <h1 className="heading1">Namaste react</h1>;
+  <h1 className="heading1">Namaste react</h1>;
 };
 
 const Heading4 = () => (
-    <div id="container">
-        <Title/>
+  <div id="container">
+    <Title />
     <h1 className="heading1">Namaste react functiona component </h1>
   </div>
 );
 
 const roots = ReactDOM.createRoot(document.getElementById("root"));
 
-// How to render functional component  
-roots.render(<Heading4/>);
+// How to render functional component
+roots.render(<Heading4 />);
