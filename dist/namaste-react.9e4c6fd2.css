@@ -27,9 +27,24 @@
   padding: 20px;
 }
 
+.res-container {
+  flex-wrap: wrap;
+  display: flex;
+}
+
 .res-card {
+  width: 200px;
+  height: 290px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.res-card:hover {
+  cursor: pointer;
   border: 1px solid #000;
-  width: 100px;
-  height: 200px;
+}
+
+.res-logo {
+  width: 100%;
 }
 /*# sourceMappingURL=namaste-react.9e4c6fd2.css.map */
