@@ -9,6 +9,8 @@ console.log(heading);
 
 // JSX - HTML-like  or XML-like syntex
 
+// jsx (transpilled before it reaches the js) - pracel - babel 
+
 const jsxHeading = <h1 id="heading">Namaste react using jsx</h1>;
 
 console.log(jsxHeading);
