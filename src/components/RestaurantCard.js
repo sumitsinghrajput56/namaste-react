@@ -1,8 +1,10 @@
+import { CDN_URL } from "../utils/constants";
+
 const RestaurantCard = (props) => {
     const {resData} = props;
 
   const {name, cuisines, avgRating, costForTwo, cloudinaryImageId } = resData?.info;
-  const {slaString} = resData?.info?.sla;
+  const {deliveryTime} = resData?.info?.sla;
 
   return (
     <div
@@ -15,7 +17,7 @@ const RestaurantCard = (props) => {
         className="res-logo"
         alt="res-logo"
         src={
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
+          CDN_URL +
           cloudinaryImageId
         }
       />
@@ -23,7 +25,7 @@ const RestaurantCard = (props) => {
       <p>{cuisines.join(", ")}</p>
       <p>{avgRating} Star</p>
       <p>{costForTwo}</p>
-      <p>{slaString}</p>
+      <p>{deliveryTime} Min</p>
     </div>
   );
 
