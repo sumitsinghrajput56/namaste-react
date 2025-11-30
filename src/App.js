@@ -2,6 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Error from "./components/Error";
 
 const AppLayout = () => {
   return (
@@ -13,7 +17,23 @@ const AppLayout = () => {
   );
 };
 
+const appRouter = createBrowserRouter([
+{
+  path: "/",
+  element: <AppLayout/>,
+  errorElement: <Error/>
+},
+{
+  path: '/About',
+  element: <About/>,
+},
+{
+  path: '/Contact',
+  element: <Contact/>,
+}
+]);
+
 const roots = ReactDOM.createRoot(document.getElementById("root"));
 
 // How to render functional component
-roots.render(<AppLayout />);
+roots.render(<RouterProvider router={appRouter} />);
