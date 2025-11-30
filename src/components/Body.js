@@ -64,7 +64,7 @@ const Body = () => {
             const filteredList = listOfRestaurants.filter(
               (res) => res.info.avgRating > 4.5
             );
-            setListOfRestaurants(filteredList);
+            setFilteredRestaurant(filteredList);
           }}
         >
           Top Rated Restaurants
@@ -74,7 +74,7 @@ const Body = () => {
         {filteredRestaurant.map((restaurent) => (
           <RestaurantCard key={restaurent.info.id} resData={restaurent} />
         ))}
-        {/* <RestaurantCard resName="KFC" cuisine="Burger, Fast Food" /> */}
+        {/* <RestaurantCard resName="KFC" cuisine="Burger, Fast Food" />  */}
       </div>
     </div>
   );
