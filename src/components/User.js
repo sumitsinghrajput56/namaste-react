@@ -1,6 +1,7 @@
-
+import { useState } from "react";
 
 const User = (props) => {
+
     return <div className="user-card">
         <h2>name: {props.name}</h2>
         <h2>Location: Dehradun</h2>
